@@ -17,10 +17,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/containership/myriad.git"
+    "url": "https://github.com/containership/myriad-kv.git"
   },
   "keywords": [
     "myriad",
+    "myriad-kv",
     "distributed",
     "key",
     "value",
@@ -29,9 +30,9 @@
   "author": "ContainerShip Developers <developers@containership.io>",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/containership/myriad/issues"
+    "url": "https://github.com/containership/myriad-kv/issues"
   },
-  "homepage": "https://github.com/containership/myriad",
+  "homepage": "https://github.com/containership/myriad-kv",
   "bin": {
     "myriad": "./myriad.js"
   }

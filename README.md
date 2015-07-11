@@ -3,7 +3,7 @@
 ## About
 
 ### Description
-A distributed key-value store built on top of praetor and legiond
+A distributed key-value store built on top of [praetor](https://github.com/containership/praetor) and [legiond](https://github.com/containership/legiond)
 
 ### Author
 ContainerShip Developers - developers@containership.io
@@ -87,6 +87,70 @@ var options = {
 
 var myriad = new Myriad(options);
 myriad.listen(function(){});
+```
+
+## Commands
+
+Below are examples of all commands that can be issued over TCP
+
+### KEYS
+
+Get all keys
+```
+KEYS
+["a::b::c","a::b::d"]
+```
+
+Get keys matching a specific pattern
+```
+KEYS a::[a-z]::d
+["a::b::d"]
+```
+
+### GET
+
+Get a specific key
+```
+GET a::b::c
+abc
+```
+
+### SET
+
+Set a key
+```
+SET a::b::a aba
+
+```
+
+### TTL
+
+Retrieve the ttl for a key
+```
+TTL a::b::a
+{"ttl":-1}
+```
+
+Set the ttl for a key (in ms)
+```
+TTL a::b::a 10000
+
+```
+
+### DELETE
+
+Delete a key
+```
+DELETE a::b::c
+
+```
+
+### FLUSH
+
+Flushes all keys from the store
+```
+FLUSH
+
 ```
 
 ## Contributing

@@ -70,18 +70,11 @@ var Myriad = require("myriad-kv");
 var options = {
     legiond: {
         network: {
-            port: process.env.MYRIAD_PORT,
-            cidr: process.env.MYRIAD_CIDR,
-            public: process.env.MYRIAD_PUBLIC
-        },
-        attributes: {
-            management_port: process.env.MYRIAD_MANAGEMENT_PORT
+            cidr: "10.0.10.0/24"
         }
     },
     persistence: {
-        max_coalescing_duration: process.env.MYRIAD_MAX_COALESCING_DURATION,
-        data_directory: process.env.MYRIAD_DATA_DIRECTORY,
-        snapshot_name: process.env.MYRIAD_SNAPSHOT_NAME
+        data_directory: "/tmp"
     }
 }
 

@@ -30,8 +30,8 @@
       "resolved": "https://registry.npmjs.org/object-sizeof/-/object-sizeof-1.0.6.tgz"
     },
     "praetor": {
-      "version": "0.1.7",
-      "from": "praetor@^0.1.7",
+      "version": "0.1.8",
+      "from": "praetor@^0.1.8",
       "dependencies": {
         "eventemitter2": {
           "version": "0.4.14",

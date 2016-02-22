@@ -2,6 +2,9 @@
 
 ## About
 
+### Build Status
+[![Build Status](https://drone.containership.io/api/badges/containership/myriad-kv/status.svg)](https://drone.containership.io/containership/myriad-kv)
+
 ### Description
 A distributed key-value store built on top of [praetor](https://github.com/containership/praetor) and [legiond](https://github.com/containership/legiond)
 

@@ -131,11 +131,6 @@
         }
       }
     },
-    "object-sizeof": {
-      "version": "1.0.6",
-      "from": "https://registry.npmjs.org/object-sizeof/-/object-sizeof-1.0.6.tgz",
-      "resolved": "https://registry.npmjs.org/object-sizeof/-/object-sizeof-1.0.6.tgz"
-    },
     "praetor": {
       "version": "0.1.11",
       "from": "praetor@^0.1.11",

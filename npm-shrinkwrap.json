@@ -135,8 +135,8 @@
       "resolved": "https://registry.npmjs.org/msgpack-js/-/msgpack-js-0.3.0.tgz"
     },
     "praetor": {
-      "version": "0.1.12",
-      "from": "praetor@0.1.12",
+      "version": "0.1.13",
+      "from": "praetor@>=0.1.13 <0.2.0",
       "dependencies": {
         "eventemitter2": {
           "version": "0.4.14",

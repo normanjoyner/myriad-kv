@@ -1,6 +1,6 @@
 {
   "name": "myriad-kv",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "dependencies": {
     "async": {
       "version": "1.0.0",
@@ -59,6 +59,16 @@
           "from": "https://registry.npmjs.org/glob/-/glob-3.2.3.tgz",
           "resolved": "https://registry.npmjs.org/glob/-/glob-3.2.3.tgz",
           "dependencies": {
+            "graceful-fs": {
+              "version": "2.0.3",
+              "from": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz",
+              "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz"
+            },
+            "inherits": {
+              "version": "2.0.1",
+              "from": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz",
+              "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
+            },
             "minimatch": {
               "version": "0.2.14",
               "from": "https://registry.npmjs.org/minimatch/-/minimatch-0.2.14.tgz",
@@ -75,16 +85,6 @@
                   "resolved": "https://registry.npmjs.org/sigmund/-/sigmund-1.0.1.tgz"
                 }
               }
-            },
-            "graceful-fs": {
-              "version": "2.0.3",
-              "from": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz",
-              "resolved": "https://registry.npmjs.org/graceful-fs/-/graceful-fs-2.0.3.tgz"
-            },
-            "inherits": {
-              "version": "2.0.1",
-              "from": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz",
-              "resolved": "https://registry.npmjs.org/inherits/-/inherits-2.0.1.tgz"
             }
           }
         },
@@ -136,7 +136,7 @@
     },
     "praetor": {
       "version": "0.1.14",
-      "from": "praetor@>=0.1.14 <0.2.0",
+      "from": "praetor@0.1.14",
       "dependencies": {
         "eventemitter2": {
           "version": "0.4.14",
@@ -163,15 +163,15 @@
                   "from": "https://registry.npmjs.org/bun/-/bun-0.0.10.tgz",
                   "resolved": "https://registry.npmjs.org/bun/-/bun-0.0.10.tgz"
                 },
-                "tstream": {
-                  "version": "0.0.1",
-                  "from": "git://github.com/jasonkuhrt/tstream.git#4f51e59ab9bb168e43f724df8b5d027235a6def4",
-                  "resolved": "git://github.com/jasonkuhrt/tstream.git#4f51e59ab9bb168e43f724df8b5d027235a6def4"
-                },
                 "delimit-stream": {
                   "version": "0.0.1",
                   "from": "https://registry.npmjs.org/delimit-stream/-/delimit-stream-0.0.1.tgz",
                   "resolved": "https://registry.npmjs.org/delimit-stream/-/delimit-stream-0.0.1.tgz"
+                },
+                "tstream": {
+                  "version": "0.0.1",
+                  "from": "git://github.com/jasonkuhrt/tstream.git#4f51e59ab9bb168e43f724df8b5d027235a6def4",
+                  "resolved": "git://github.com/jasonkuhrt/tstream.git#4f51e59ab9bb168e43f724df8b5d027235a6def4"
                 }
               }
             },
@@ -206,6 +206,16 @@
                   "version": "0.0.7",
                   "from": "https://registry.npmjs.org/wmic/-/wmic-0.0.7.tgz",
                   "resolved": "https://registry.npmjs.org/wmic/-/wmic-0.0.7.tgz"
+                },
+                "lodash": {
+                  "version": "4.11.2",
+                  "from": "lodash@>=4.3.0 <5.0.0",
+                  "resolved": "https://registry.npmjs.org/lodash/-/lodash-4.11.2.tgz"
+                },
+                "async": {
+                  "version": "2.0.0-rc.3",
+                  "from": "async@latest",
+                  "resolved": "https://registry.npmjs.org/async/-/async-2.0.0-rc.3.tgz"
                 }
               }
             },

@@ -6,7 +6,7 @@ var options = {
     legiond: {
         network: {
             port: process.env.MYRIAD_PORT,
-            cidr: process.env.MYRIAD_CIDR,
+            cidr: process.env.MYRIAD_CIDR ? process.env.MYRIAD_CIDR.split(",") : [],
             public: process.env.MYRIAD_PUBLIC
         },
         attributes: {

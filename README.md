@@ -1,4 +1,4 @@
-# myriad-kv
+![myriad logo](http://content.containership.io/hubfs/myriad-horizontal.svg)
 
 ## About
 

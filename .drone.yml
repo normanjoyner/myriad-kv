@@ -1,5 +1,5 @@
 build:
-  image: library/node:0.10.41
+  image: library/node:6.0.0
   commands:
     - npm install
     - npm test
@@ -15,5 +15,13 @@ publish:
     username: "$$NPM_USERNAME"
     password: "$$NPM_PASSWORD"
     email: "$$NPM_EMAIL"
+    when:
+      event: tag
+  docker:
+    username: "$$DOCKERHUB_USERNAME"
+    password: "$$DOCKERHUB_PASSWORD"
+    email: "$$DOCKERHUB_EMAIL"
+    repo: containership/myriad-kv
+    tag: $$TAG
     when:
       event: tag

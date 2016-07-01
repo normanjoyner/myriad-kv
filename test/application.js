@@ -1,1 +1,3 @@
-console.log("No tests yet!");
+'use strict';
+
+console.log('No tests yet!');

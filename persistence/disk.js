@@ -1,39 +1,42 @@
-var fs = require("fs");
-var _ = require("lodash");
-var msgpack = require("msgpack-js");
+'use strict';
 
-function Disk(options){
-    _.defaults(options, {
-        data_directory: "/data",
-        snapshot_name: "snapshot"
-    });
+const _ = require('lodash');
+const fs = require('fs');
+const msgpack = require('msgpack-js');
 
-    this.options = options;
-}
+class Disk {
+    constructor(options) {
+        options = options || {};
+        this.options = _.defaults(options, {
+            data_directory: '/data',
+            snapshot_name: 'snapshot'
+        });
 
-Disk.prototype.bootstrap = function(fn){
-    var self = this;
+        this.options.snapshot_path = `${this.options.data_directory}/${this.options.snapshot_name}`;
+    }
 
-    fs.readFile([this.options.data_directory, this.options.snapshot_name].join("/"), function(err, data){
-        if(err && err.code == "ENOENT"){
-            fs.writeFile([self.options.data_directory, self.options.snapshot_name].join("/"), "", function(err, data){
-                if(err)
-                    return fn(err);
-                else
+    bootstrap(fn) {
+        fs.readFile(this.options.snapshot_path, (err, data) => {
+            if(err && err.code == 'ENOENT') {
+                fs.writeFile(this.options.snapshot_path, '', (err) => {
+                    if(err) {
+                        return fn(err);
+                    }
+
                     return fn(null, {});
-            });
-        }
-        else if(err)
-            return fn(err);
-        else if(_.isEmpty(data.toString()))
-            return fn(null, {});
-        else
-            return fn(null, msgpack.decode(data));
-    });
-}
+                });
+            } else if(err) {
+                return fn(err);
+            } else if(_.isEmpty(data.toString())) {
+                return fn(null, {});
+            } else {
+                return fn(null, msgpack.decode(data));
+            }
+        });
+    }
 
-Disk.prototype.snapshot = function(data, fn){
-    fs.writeFile([this.options.data_directory, this.options.snapshot_name].join("/"), msgpack.encode(data), fn);
+    snapshot(data, fn) {
+        fs.writeFile(this.options.snapshot_path, msgpack.encode(data), fn);
+    }
 }
-
 module.exports = Disk;

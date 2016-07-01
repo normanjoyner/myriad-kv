@@ -12,9 +12,12 @@
     "praetor": "^0.1.14",
     "winston": "^1.0.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^2.13.1"
+  },
   "scripts": {
-    "test": "./node_modules/.bin/mocha"
+    "test": "./node_modules/.bin/mocha",
+    "lint": "./node_modules/.bin/eslint ."
   },
   "repository": {
     "type": "git",

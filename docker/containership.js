@@ -1,30 +1,37 @@
 #!/usr/bin/env node
-var dns = require("native-dns");
+'use strict';
 
-var question = dns.Question({
-  name: ["followers", process.env.CS_CLUSTER_ID, "containership"].join("."),
-  type: "A"
+const dns = require('native-dns');
+
+const question = dns.Question({
+    name: `followers.${process.env.CS_CLUSTER_ID}.containership`,
+    type: 'A'
 });
 
-var req = dns.Request({
+const req = dns.Request({
     question: question,
-    server: { address: "127.0.0.1", port: 53, type: "udp" },
+    server: {
+        address: '127.0.0.1',
+        port: 53,
+        type: 'udp'
+    },
     timeout: 2000
 });
 
-req.on("timeout", function(){
-    process.stderr.write(["DNS timeout when resolving", question.name].join(" "));
+req.on('timeout', () => {
+    process.stderr.write(`DNS timeout when resolving ${question.name}`);
     process.exit(1);
 });
 
-req.on("message", function (err, answer) {
-    var addresses = [];
-    answer.answer.forEach(function(a){
-        addresses.push([a.address, "32"].join("/"));
+req.on('message', (err, answer) => {
+    const addresses = [];
+
+    answer.answer.forEach((answer) => {
+        addresses.push(`${answer.address}/32`);
     });
 
-    process.env.MYRIAD_CIDR = addresses.join(",");
-    require([__dirname, "..", "myriad"].join("/"));
+    process.env.MYRIAD_CIDR = addresses.join(',');
+    require('../myriad');
 });
 
 req.send();

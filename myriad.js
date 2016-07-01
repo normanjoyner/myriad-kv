@@ -1,12 +1,14 @@
 #!/usr/bin/env node
-var Myriad = require([__dirname, "application"].join("/"));
+'use strict';
 
-var options = {
+const Myriad = require('./application');
+
+const options = {
     leader_eligible: true,
     legiond: {
         network: {
             port: process.env.MYRIAD_PORT,
-            cidr: process.env.MYRIAD_CIDR ? process.env.MYRIAD_CIDR.split(",") : [],
+            cidr: process.env.MYRIAD_CIDR ? process.env.MYRIAD_CIDR.split(',') : [],
             public: process.env.MYRIAD_PUBLIC
         },
         attributes: {
@@ -19,7 +21,9 @@ var options = {
         snapshot_name: process.env.MYRIAD_SNAPSHOT_NAME
     },
     standalone: true
-}
+};
 
-var myriad = new Myriad(options);
-myriad.listen(function(){});
+const myriad = new Myriad(options);
+myriad.listen(() => {
+    /* myriad is listening */
+});

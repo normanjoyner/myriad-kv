@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 'use strict';
 
-const Myriad = require('./application');
+const Myriad = require('./index');
 
 const options = {
     leader_eligible: true,

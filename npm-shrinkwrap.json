@@ -715,9 +715,9 @@
       "resolved": "https://registry.npmjs.org/pluralize/-/pluralize-1.2.1.tgz"
     },
     "praetor": {
-      "version": "0.1.18",
-      "from": "praetor@>=0.1.18 <0.2.0",
-      "resolved": "https://registry.npmjs.org/praetor/-/praetor-0.1.18.tgz",
+      "version": "0.1.19",
+      "from": "praetor@>=0.1.19 <0.2.0",
+      "resolved": "https://registry.npmjs.org/praetor/-/praetor-0.1.19.tgz",
       "dependencies": {
         "lodash": {
           "version": "2.4.2",

@@ -1,6 +1,6 @@
 {
   "name": "myriad-kv",
-  "version": "0.3.9",
+  "version": "0.3.10",
   "dependencies": {
     "acorn": {
       "version": "3.2.0",

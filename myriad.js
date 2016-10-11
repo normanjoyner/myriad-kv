@@ -5,6 +5,7 @@ const Myriad = require('./index');
 
 const options = {
     leader_eligible: true,
+    praetor: {},
     legiond: {
         network: {
             port: process.env.MYRIAD_PORT,

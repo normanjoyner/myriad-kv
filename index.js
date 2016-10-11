@@ -31,7 +31,8 @@ class Myriad {
         async.series([
             (cb) => {
                 _.defaults(self.options, {
-                    standalone: false
+                    standalone: false,
+                    praetor: {}
                 });
 
                 _.defaults(self.options.legiond.network, {

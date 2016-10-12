@@ -1,6 +1,6 @@
 {
   "name": "myriad-kv",
-  "version": "0.3.10",
+  "version": "0.3.11",
   "description": "A distributed key-value store built on top of praetor and legiond",
   "main": "index.js",
   "dependencies": {

@@ -1,4 +1,4 @@
-FROM library/node:6.0.0
+FROM library/node:6.9.1
 
 MAINTAINER ContainerShip Developers <developers@containership.io>
 
@@ -13,7 +13,8 @@ ENV MYRIAD_PORT=27770
 ENV MYRIAD_PUBLIC=true
 
 # install dependencies
-RUN npm install
+RUN npm install yarn -g
+RUN yarn install --ignore-engines
 
 # set command
 CMD ./docker/containership.js

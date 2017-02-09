@@ -822,9 +822,9 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
-praetor@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.1.tgz#66427d3141bcd8cae20816169eae2ee4982fd598"
+praetor@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.2.tgz#0d95f7dd1b9930f90864dbd8e03aa4b136d47ce4"
   dependencies:
     eventemitter2 "^0.4.14"
     legiond "^2.0.1"

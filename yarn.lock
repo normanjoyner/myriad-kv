@@ -616,9 +616,9 @@ jsonpointer@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/jsonpointer/-/jsonpointer-4.0.0.tgz#6661e161d2fc445f19f98430231343722e1fcbd5"
 
-legiond@^2.0.1:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/legiond/-/legiond-2.0.1.tgz#773d75cd7286b0f878984ce1a7bcd9cba2615e4d"
+legiond@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/legiond/-/legiond-3.0.0.tgz#578a49d51d2b585c2dd7a43276c032c545344ced"
   dependencies:
     async "^0.9.0"
     eventemitter2 "^0.4.13"
@@ -822,12 +822,12 @@ pluralize@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-1.2.1.tgz#d1a21483fd22bb41e58a12fa3421823140897c45"
 
-praetor@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.0.2.tgz#0d95f7dd1b9930f90864dbd8e03aa4b136d47ce4"
+praetor@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/praetor/-/praetor-1.1.0.tgz#4e681c7ceb1ef52d243222baf07f1a8007f23f3d"
   dependencies:
     eventemitter2 "^0.4.14"
-    legiond "^2.0.1"
+    legiond "3.0.0"
     lodash "^2.4.1"
 
 prelude-ls@~1.1.2:
